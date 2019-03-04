@@ -1,3 +1,6 @@
 work
 alignments/*.bam
 alignments/*.bai
+.nextflow
+.nextflow.log
+.nextflow.log.*
