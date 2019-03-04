@@ -6,3 +6,6 @@ samtools sort -o alignments/sim_reads_aligned_1.sorted.bam alignments/sim_reads_
 
 echo "Indexing BAM"
 samtools index alignments/sim_reads_aligned_1.sorted.bam
+
+echo "Checking files created"
+ls -l alignments
