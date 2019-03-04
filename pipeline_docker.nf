@@ -3,6 +3,8 @@
 sam_channel = Channel.fromPath('alignments/*.sam')
 
 process convertSam2Bam {
+	container 'mgibio/samtools:1.9'
+	
 	input:
 	file sam_file from sam_channel
 	
@@ -15,6 +17,7 @@ process convertSam2Bam {
 }
 
 process sortBam {
+	container 'mgibio/samtools:1.9'
 	input:
 	file bam_file from bam_channel
 
@@ -27,10 +30,11 @@ process sortBam {
 }
 
 process indexBam {
+	container 'mgibio/samtools:1.9'
 	input:
 	file bam_sorted_file from bam_sorted_channel
 
 	"""
-}
+	samtools index ${bam_sorted_file}
 	"""
 }

@@ -4,3 +4,4 @@ alignments/*.bai
 .nextflow
 .nextflow.log
 .nextflow.log.*
+report.html
